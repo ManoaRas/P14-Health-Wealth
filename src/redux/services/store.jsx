@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit"
 
-import employeeReducer from '../features/authSlice'
+import employeeReducer from '../features/employeeSlice'
 
 /**
  * configureStore simplifies the creation and configuration of the Redux store
