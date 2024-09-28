@@ -11,6 +11,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 
+import dayjs from 'dayjs';
 import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
 
@@ -18,8 +19,7 @@ import { departments } from "../data/departments";
 import { states } from "../data/states";
 
 import { setEmployee } from "../redux/features/employeeSlice";
-import { employeeSchema } from "../redux/services/validationsMessage";
-import dayjs from 'dayjs';
+import { employeeSchema } from "../utils/validationsMessage";
 
 export function EmployeeForm() {
   const dispatch = useDispatch()
