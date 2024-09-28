@@ -1,25 +1,22 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
-import logo from "../assets/logo/wealth-health.png"
+import logo from "../assets/HRnet.png"
 
 export function Header() {
   return (
-    <header>
-      <nav className="nav">
-        <Link className="nav--logo" to="/">
-          <img src={logo} alt="HRnet logo" />
-        </Link>
+    <header className="header">
+      <div className="header--logo">
+        <img className="header--logo__img" src={logo} alt="HRnet logo" />
+        <p className="header--logo__text">HRnet</p>
+      </div>
 
-        <div className="nav--link">
-          <NavLink className="" to="/employees">
-            <i className="fa-solid fa-users"></i>
-            <span>Current Employees</span>
-          </NavLink>
+      <nav className="header--nav">
+        <div className="header--nav--link">
+          <NavLink to="/">Home</NavLink>
+        </div>
 
-          <NavLink className="" to="/employees/create">
-            <i className="fa-solid fa-user-plus"></i>
-            <span>Create Employee</span>
-          </NavLink>
+        <div className="header--nav--link">
+          <NavLink to="/employees">Employees</NavLink>
         </div>
       </nav>
     </header>
