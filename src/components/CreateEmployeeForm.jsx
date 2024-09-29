@@ -10,7 +10,6 @@ import { FormDatePicker } from './FormDatePicker'
 import { FormSelect } from './FormSelect'
 import { FormTextField } from './FormTextField'
 
-
 import { addEmployee } from "../redux/features/employeeSlice"
 
 export function CreateEmployeeForm({ departments, employeeSchema, states }) {

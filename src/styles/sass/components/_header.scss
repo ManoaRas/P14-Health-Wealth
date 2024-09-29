@@ -12,7 +12,6 @@
     align-items: center;
     &__img {
       height: 100px;
-      width: 100px;
     }
     &__text {
       font-size: $xxlf;
@@ -33,7 +32,7 @@
     }
 
     .active {
-      color: $secondary-color;
+      color: #a41c94;
       text-decoration: underline;
     }
   }

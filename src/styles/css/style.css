@@ -59,7 +59,6 @@ fieldset {
 }
 .header--logo__img {
   height: 100px;
-  width: 100px;
 }
 .header--logo__text {
   font-size: 36px;
@@ -77,7 +76,7 @@ fieldset {
   padding-left: 20px;
 }
 .header--nav .active {
-  color: #dc30c8;
+  color: #a41c94;
   text-decoration: underline;
 }
 
