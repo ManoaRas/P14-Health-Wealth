@@ -1,4 +1,4 @@
-import { EmployeeForm } from "../components/EmployeeForm"
+import { CreateEmployeeForm } from "../components/CreateEmployeeForm"
 
 import { departments } from "../data/departments"
 import { states } from "../data/states"
@@ -11,7 +11,7 @@ export function Home() {
       <section className="home--content">
         <h1 className="home--content__title">Create Employee</h1>
 
-        <EmployeeForm
+        <CreateEmployeeForm
           departments={departments}
           employeeSchema={employeeSchema}
           states={states}

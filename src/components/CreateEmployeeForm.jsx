@@ -10,7 +10,7 @@ import { FormTextField } from './FormTextField'
 
 import { addEmployee } from "../redux/features/employeeSlice"
 
-export function EmployeeForm({ departments, employeeSchema, states }) {
+export function CreateEmployeeForm({ departments, employeeSchema, states }) {
   const dispatch = useDispatch()
 
   const formik = useFormik({
