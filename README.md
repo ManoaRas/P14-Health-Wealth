@@ -45,6 +45,9 @@ Lien Github du package : [ici](https://github.com/manoaras/p14-modal-wh)
 
 ## Rapport de comparaison Lighthouse
 
+Le rapport de comparaison Lighthouse entre les deux versions :
+[Doc des rapports de comparaison](https://github.com/manoaras/P14-Wealth-Health/blob/main/Docs/lighthouse-hrnet-comparison.pdf)
+
 ## Règles de convention de nommage pour ce projet
 
 ### SCSS
