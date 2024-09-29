@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 
 import dayjs from 'dayjs'
 import { useFormik } from "formik"
-import Modal from '@manoaras/p14-modal-wh'
+import { Modal } from '@manoaras/p14-modal-wh'
 import { useState } from 'react'
 import { useDispatch } from "react-redux"
 

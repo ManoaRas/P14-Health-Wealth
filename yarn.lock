@@ -1729,10 +1729,10 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
-"@manoaras/p14-modal-wh@^0.1.1":
-  version "0.1.1"
-  resolved "https://npm.pkg.github.com/download/@manoaras/p14-modal-wh/0.1.1/b08af623a062aaa2d08869dfbf5da52e407bb805#b08af623a062aaa2d08869dfbf5da52e407bb805"
-  integrity sha512-4QyAyVncFik2nBxhI+SePURBihCQtBNHpbbIyCZoDt1PCo2rQFZcAw4NTvuD0fo5Hjqem4B5Y75qAfQcwhMtJg==
+"@manoaras/p14-modal-wh@^0.1.2":
+  version "0.1.2"
+  resolved "https://npm.pkg.github.com/download/@manoaras/p14-modal-wh/0.1.2/43b24854126d35341d6a96864270916da627ab37#43b24854126d35341d6a96864270916da627ab37"
+  integrity sha512-u3OH7wGJfXZez+yk7w9n1884yiSI0LMVr0N0MO/st8xmE7liGlGYerzZcs6AnOBRAEGQHy6o8E2Nn3p75fvLIQ==
 
 "@mui/core-downloads-tracker@^6.1.1":
   version "6.1.1"
