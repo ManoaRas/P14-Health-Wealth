@@ -8,6 +8,7 @@ export function FormTextField({ formik, name, label, placeholder, width }) {
       label={label}
       placeholder={placeholder}
       name={name}
+      required
       sx={width}
       value={formik.values[name]}
       onChange={formik.handleChange}
