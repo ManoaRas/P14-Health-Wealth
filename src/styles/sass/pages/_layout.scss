@@ -1,0 +1,11 @@
+.layout {
+  min-height: 78.4vh;
+
+  &--content {
+    margin: 0 100px;
+
+    &__title {
+      font-size: $xlf;
+    }
+  }
+}

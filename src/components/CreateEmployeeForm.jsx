@@ -38,35 +38,39 @@ export function CreateEmployeeForm({ departments, employeeSchema, states }) {
 
   return (
     <form className="form" onSubmit={formik.handleSubmit}>
-      <FormTextField
-        formik={formik}
-        name="firstName"
-        label="First Name"
-        placeholder="John"
-        width={{ width: '45%' }}
-      />
+      <fieldset className="bn-field">
+        <FormTextField
+          formik={formik}
+          name="firstName"
+          label="First Name"
+          placeholder="John"
+          classField={{ width: '45%', margin: '10px' }}
+        />
 
-      <FormTextField
-        formik={formik}
-        name="lastName"
-        label="Last Name"
-        placeholder="Doe"
-        width={{ width: '45%' }}
-      />
+        <FormTextField
+          formik={formik}
+          name="lastName"
+          label="Last Name"
+          placeholder="Doe"
+          classField={{ width: '45%', margin: '10px' }}
+        />
 
-      <FormDatePicker
-        formik={formik}
-        label="Date of Birth"
-        name="dateOfBirth"
-        width={{ width: '45%' }}
-      />
+        <FormDatePicker
+          className="form--field"
+          formik={formik}
+          label="Date of Birth"
+          name="dateOfBirth"
+          classField={{ width: '45%', margin: '10px' }}
+        />
 
-      <FormDatePicker
-        formik={formik}
-        label="Start Date"
-        name="startDate"
-        width={{ width: '45%' }}
-      />
+        <FormDatePicker
+          className="form--field"
+          formik={formik}
+          label="Start Date"
+          name="startDate"
+          classField={{ width: '45%', margin: '10px' }}
+        />
+      </fieldset>
 
       <fieldset>
         <legend>Address</legend>
@@ -76,50 +80,56 @@ export function CreateEmployeeForm({ departments, employeeSchema, states }) {
           name="street"
           label="Street"
           placeholder="Buttonwood Avenue"
-          width={{ width: '45%' }}
+          classField={{ width: '45%', margin: '10px' }}
         />
 
         <FormTextField
+          className="form--fieldset--field"
           formik={formik}
           name="city"
           label="City"
           placeholder="Pittsburgh"
-          width={{ width: '45%' }}
+          classField={{ width: '45%', margin: '10px' }}
         />
 
         <FormSelect
+          className="form--fieldset--field"
           formik={formik}
           options={states}
           name="state"
           label="State"
-          width={{ width: '45%' }}
+          classField={{ width: '45%', margin: '10px' }}
         />
 
         <FormTextField
+          className="form--fieldset--field"
           formik={formik}
           name="zipCode"
           label="Zip Code"
           placeholder="86385"
-          width={{ width: '45%' }}
+          classField={{ width: '45%', margin: '10px' }}
         />
       </fieldset>
 
-      <FormSelect
-        formik={formik}
-        options={departments}
-        name="department"
-        label="Department"
-        width={{ width: '45%' }}
-      />
+      <fieldset className="bn-field">
+        <FormSelect
+          className="form--field"
+          formik={formik}
+          options={departments}
+          name="department"
+          label="Department"
+          classField={{ width: '45%', margin: '10px' }}
+        />
+      </fieldset>
 
       <Button
-        className="form__button"
+        className="form--btn"
         color="primary"
-        variant="contained"
-        fullWidth
+        sx={{ width: '100%' }}
         type="submit"
+        variant="contained"
       >
-        Save
+        <span className="form--btn__text">Save</span>
       </Button>
     </form>
   )

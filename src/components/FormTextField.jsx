@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material'
 
-export function FormTextField({ formik, name, label, placeholder, width }) {
+export function FormTextField({ formik, name, label, placeholder, classField }) {
   return (
     <TextField
       error={formik.touched[name] && Boolean(formik.errors[name])}
@@ -9,7 +9,7 @@ export function FormTextField({ formik, name, label, placeholder, width }) {
       placeholder={placeholder}
       name={name}
       required
-      sx={width}
+      sx={classField}
       value={formik.values[name]}
       onChange={formik.handleChange}
       onBlur={formik.handleBlur}

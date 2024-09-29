@@ -1,0 +1,14 @@
+.form {
+  margin: 30px 0;
+
+  &--btn {
+    &__text {
+      font-size: $mdf;
+      font-weight: 700;
+    }
+  }
+}
+
+.b-field { border: none }
+
+fieldset { margin: 20px 0 }

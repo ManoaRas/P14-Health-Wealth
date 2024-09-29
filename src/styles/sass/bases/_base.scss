@@ -1,0 +1,21 @@
+html {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1;
+}

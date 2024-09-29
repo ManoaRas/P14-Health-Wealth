@@ -55,7 +55,7 @@ export function EmployeeList() {
     )
   }
   const CustomPagination = (props) => {
-    return <GridPagination ActionsComponent={Pagination} {...props} />
+    return <GridPagination ActionsComponent={Pagination} {...props} sx={{ width: '100%' }} />
   }
 
   return (
@@ -64,6 +64,8 @@ export function EmployeeList() {
         id="search"
         label="Search"
         placeholder="Ex: 'Alabama' or '86385' or 'Sales' etc"
+        size="small"
+        sx={{ width: '45%', margin: '10px 0 10px 10px' }}
         type="search"
         value={searchInput}
         onChange={handleSearch}
@@ -86,20 +88,23 @@ export function EmployeeList() {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 10
+              pageSize: 5
             }
           }
         }}
         rows={searchInput ? filteredRows : initialRows}
-        pageSizeOptions={[10]}
+        pageSizeOptions={[5]}
         slots={{
           pagination: CustomPagination
+        }}
+        sx={{
+          '& .MuiTablePagination-spacer': { display: 'none' },
+          '& .MuiTablePagination-toolbar': { justifyContent: 'flex-end' }
         }}
       />
 
       <Button
-        className=""
-        sx={{ bgcolor: "secondary.dark", color: "white.main" }}
+        sx={{ bgcolor: "secondary.dark", color: "white.main", margin: '20px 0 20px 20px' }}
         variant="contained"
         onClick={handleDeleteAllEmployees}
       >

@@ -1,11 +1,11 @@
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select } from '@mui/material'
 
-export function FormSelect({ formik, options, name, label, width }) {
+export function FormSelect({ formik, options, name, label, classField }) {
   return (
     <FormControl
       error={formik.touched[name] && Boolean(formik.errors[name])}
       required
-      sx={width}
+      sx={classField}
     >
       <InputLabel id={`${name}-select`}>{label}</InputLabel>
 
