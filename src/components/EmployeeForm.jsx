@@ -8,7 +8,7 @@ import { FormDatePicker } from './FormDatePicker'
 import { FormSelect } from './FormSelect'
 import { FormTextField } from './FormTextField'
 
-import { setEmployee } from "../redux/features/employeeSlice"
+import { addEmployee } from "../redux/features/employeeSlice"
 
 export function EmployeeForm({ departments, employeeSchema, states }) {
   const dispatch = useDispatch()
@@ -32,7 +32,7 @@ export function EmployeeForm({ departments, employeeSchema, states }) {
         dateOfBirth: values.dateOfBirth ? dayjs(values.dateOfBirth).format('MM/DD/YYYY') : null,
         startDate: values.startDate ? dayjs(values.startDate).format('MM/DD/YYYY') : null
       }
-      dispatch(setEmployee(formattedValues))
+      dispatch(addEmployee(formattedValues))
     }
   })
 
