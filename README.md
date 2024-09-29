@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# P14 OC : HRnet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objectifs
 
-## Available Scripts
+- Convertir l'ensemble du projet HRNet en React.
+- Convertir l'un des quatre plugins jQuery actuels en React.
+- Remplacer les 3 plugins jQuery restants par des composants React que tu coderas toi-même, ou que tu peux importer depuis des libraires existantes si tu manques de temps.
+- Utiliser le stockage local pour la persistance des données.
+- Effectuer des tests de performance Lighthouse en comparant l'ancienne et la nouvelle application.
 
-In the project directory, you can run:
+## Description
 
-### `yarn start`
+HRnet est une application interne permettant de consulter et gérer une base de données d'employés.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Framework :
 
-### `yarn test`
+- React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Langages :
 
-### `yarn build`
+- HTML
+- CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Librairies :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React Redux
+- React Router
+- SASS
+- Formik
+- Yup
+- dayjs
+- material UI (@mui and @emotion)
+- @manoaras/p14-modal-wh
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Projet d'origine
 
-### `yarn eject`
+Le projet d'origine en JQuery est fourni par Openclassrooms : [ici](https://github.com/OpenClassrooms-Student-Center/P12_Front-end)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Création d'un package npm
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Le package npm créé se nomme @manoaras/p14-modal-wh et concerne le composant Modal qui permet d'afficher une simple modal de validation de création d'employé. (Voir src/components/CreateEmployeeForm.jsx)</br>
+Lien Github du package : [ici](https://github.com/manoaras/p14-modal-wh)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Rapport de comparaison Lighthouse
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Règles de convention de nommage pour ce projet
 
-## Learn More
+### SCSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Pour les noms de variables et de classes : `kebab--case ou kebab__case`
+```
+  ex:
+  .header {
+    &--logo{
+      display: flex;
+      align-items: center;
+    }
+  }
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  .form {
+    &--btn {
+      &__text {
+        font-size: $mdf;
+        font-weight: 700;
+      }
+    }
+  }
+```
 
-### Code Splitting
+### JS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Pour les noms de variables et de fonctions : `camelCase`
+```
+  ex:
+    const employees = useSelector((state) => state.employee.employees)
+    const handleSearch = (event) => setSearchInput(event.target.value)
+```
