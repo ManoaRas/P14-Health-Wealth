@@ -37,6 +37,7 @@ export function CreateEmployeeForm({ departments, employeeSchema, states }) {
       }
       dispatch(addEmployee(employeeData))
       setIsModalOpen(true)
+      formik.resetForm()
     }
   })
 
