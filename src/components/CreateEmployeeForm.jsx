@@ -16,6 +16,7 @@ export function CreateEmployeeForm({ departments, employeeSchema, states }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const dispatch = useDispatch()
 
+  // Create data of employee to use in the form and save it in the store with redux
   const formik = useFormik({
     initialValues: {
       firstName: '',

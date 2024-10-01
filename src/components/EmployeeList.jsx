@@ -18,6 +18,7 @@ export function EmployeeList() {
   const employees = useSelector((state) => state.employee.employees)
   const [searchInput, setSearchInput] = useState("")
 
+  // Define initial value of employee in a row for each employee getting
   const initialRows = employees.map((employee, index) => ({
     id: index,
     firstName: employee.firstName,
@@ -59,6 +60,7 @@ export function EmployeeList() {
     )
   }
   const CustomPagination = (props) => {
+    // Return specific pagination for DataGrid with number change page
     return <GridPagination ActionsComponent={Pagination} {...props} sx={{ width: '100%' }} />
   }
 

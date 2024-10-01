@@ -12,6 +12,10 @@
 
 HRnet est une application interne permettant de consulter et gérer une base de données d'employés.
 
+Utiliser `npm run build` ou `yarn build` pour déployer un build de l'application en local.
+Ensuite exécuter `yarn global add serve`
+Et enfin lancer l'app avec `serve -s build`
+
 ## Technologies
 
 Framework :
