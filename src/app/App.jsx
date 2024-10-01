@@ -1,7 +1,8 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { PersistGate } from "redux-persist/integration/react"
 
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
@@ -9,7 +10,7 @@ import { Footer } from "../components/Footer"
 import { Home } from "../pages/Home"
 import { Employee } from "../pages/Employee"
 
-import { store } from '../redux/services/store'
+import { persistor, store } from "../redux/services/store"
 
 export function App() {
   const theme = createTheme({
@@ -24,16 +25,18 @@ export function App() {
   return (
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <Router>
-          <Header />
+        <PersistGate loading={null} persistor={persistor}>
+          <Router>
+            <Header />
 
-          <Routes>
-            <Route element={<Home />} path="/" />
-            <Route element={<Employee />} path="/employees" />
-          </Routes>
+            <Routes>
+              <Route element={<Home />} path="/" />
+              <Route element={<Employee />} path="/employees" />
+            </Routes>
 
-          <Footer />
-        </Router>
+            <Footer />
+          </Router>
+        </PersistGate>
       </Provider>
     </ThemeProvider>
   )

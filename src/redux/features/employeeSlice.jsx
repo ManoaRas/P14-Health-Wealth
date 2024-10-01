@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { persistReducer } from "redux-persist"
+import storage from "redux-persist/lib/storage"
+
+const persistConfig = {
+  key: "root",
+  storage
+}
 
 const initialState = {
-  employees: JSON.parse(localStorage.getItem('employees')) || [],
+  employees: [],
   currentEmployee: {
     firstName: null,
     lastName: null,
@@ -17,18 +24,18 @@ const initialState = {
 
 export const employeeSlice = createSlice({
   name: "employee",
-  initialState: initialState,
+  initialState,
   reducers: {
     addEmployee: (state, { payload }) => {
       state.employees.push(payload)
-      localStorage.setItem('employees', JSON.stringify(state.employees))
     },
     removeAllEmployees: (state) => {
       state.employees = []
-      localStorage.removeItem('employees')
     }
   }
 })
 
+const persistedReducer = persistReducer(persistConfig, employeeSlice.reducer)
+
 export const { addEmployee, removeAllEmployees } = employeeSlice.actions
-export default employeeSlice.reducer
+export default persistedReducer

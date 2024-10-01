@@ -30,12 +30,12 @@ export function CreateEmployeeForm({ departments, employeeSchema, states }) {
     },
     validationSchema: employeeSchema,
     onSubmit: (values) => {
-      const formattedValues = {
+      const employeeData = {
         ...values,
         dateOfBirth: values.dateOfBirth ? dayjs(values.dateOfBirth).format('MM/DD/YYYY') : null,
         startDate: values.startDate ? dayjs(values.startDate).format('MM/DD/YYYY') : null
       }
-      dispatch(addEmployee(formattedValues))
+      dispatch(addEmployee(employeeData))
       setIsModalOpen(true)
     }
   })

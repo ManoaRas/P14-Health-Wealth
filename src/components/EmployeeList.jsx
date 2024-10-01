@@ -31,15 +31,19 @@ export function EmployeeList() {
     zipCode: employee.zipCode
   }))
 
+  // Filter table row with stored data and display information needed
   const filteredRows = initialRows.filter((row) =>
     Object.keys(row).some(
       (key) => key !== "id" && row[key].toString().toLowerCase().includes(searchInput.toLowerCase())
     )
   )
 
-  const handleDeleteAllEmployees = () => dispatch(removeAllEmployees())
+  const handleDeleteAllEmployees = () => {
+    dispatch(removeAllEmployees())
+  }
   const handleSearch = (event) => setSearchInput(event.target.value)
 
+  // Custom pagination by MUI
   const Pagination = ({ page, onPageChange }) => {
     // Retrieves the API context to interact with DataGrid
     const apiRef = useGridApiContext()
