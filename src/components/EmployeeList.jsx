@@ -94,12 +94,17 @@ export function EmployeeList() {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 5
+              pageSize: 10
             }
           }
         }}
         rows={searchInput ? filteredRows : initialRows}
-        pageSizeOptions={[5]}
+        pageSizeOptions={[10, 25, 50, 100]}
+        slotProps={{
+          pagination: {
+            labelRowsPerPage: 'Show entries:'
+          }
+        }}
         slots={{
           pagination: CustomPagination
         }}
