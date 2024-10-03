@@ -4,7 +4,6 @@ export function FormSelect({ formik, options, name, label, classField }) {
   return (
     <FormControl
       error={formik.touched[name] && Boolean(formik.errors[name])}
-      required
       sx={classField}
     >
       <InputLabel id={`${name}-select`}>{label}</InputLabel>
